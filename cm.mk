@@ -1,7 +1,7 @@
-$(call inherit-product, device/samsung/mondrianlte/full_mondrianlte.mk)
+$(call inherit-product, device/samsung/picassolte/full_picassolte.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_DEVICE := mondrianlte
-PRODUCT_NAME := cm_mondrianlte
+PRODUCT_DEVICE := picassolte
+PRODUCT_NAME := cm_picassolte

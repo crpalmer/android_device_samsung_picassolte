@@ -20,28 +20,16 @@
 # definition file).
 #
 
-TARGET_MSM8974_COMMON_WLAN_VARIANT := prima
 include device/samsung/tabpro-common/BoardConfigCommon.mk
 
 # Kernel
-TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_mondrian_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_picassolte_defconfig
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/mondrianlte/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/picassolte/mkbootimg.mk
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 13631488
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2569011200
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12661537792
 
-# WLAN: Use qmi-client interface to load the correct MAC address
-TARGET_USES_QCOM_WCNSS_QMI := true
-
-# OTA Identification
-#
-# It's fine to install on mondrianwifi or lte because the devices are
-# unified other than the fact that one supports telephony and the other
-# doesn't.
-#
-# If someone wants to use the telephony apps for some reason, let's let them.
-
-TARGET_OTA_ASSERT_DEVICE := mondrianwifi,mondrianwifiue,mondrianwifixx,mondrianlte,mondrianltexx
+TARGET_OTA_ASSERT_DEVICE := picassolte,picassoltexx
