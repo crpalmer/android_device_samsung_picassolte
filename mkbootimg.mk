@@ -9,7 +9,7 @@ KERNEL_CONFIG := $(KERNEL_OUT)/.config
 PICASSOLTE_DTS_NAMES := msm8974
 
 PICASSOLTE_DTS_FILES = \
-   $(wildcard $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8974/msm8974-sec-picassolte-*.dts)
+   $(wildcard $(TOP)/$(TARGET_KERNEL_SOURCE)/arch/arm/boot/dts/msm8974/msm8974-sec-picasso-*.dts)
 
 PICASSOLTE_DTS_FILE = $(lastword $(subst /, ,$(1)))
 DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(call PICASSOLTE_DTS_FILE,$(1))))
