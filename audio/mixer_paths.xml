@@ -1071,6 +1071,14 @@
                 <ctl name="DEC6 Volume" value="84" />
         </path>
 
+	<path name="voice-speaker">
+		<path name="spk" />
+		<ctl name="RX4 Digital Volume" value="84" />
+		<ctl name="RX6 Digital Volume" value="84" />
+		<ctl name="LINEOUT3 Volume" value="20" />
+		<ctl name="LINEOUT4 Volume" value="20" />
+	</path>
+
         <path name="voice-rec-mic">
                 <path name="vr-main-mic" />
         </path>
