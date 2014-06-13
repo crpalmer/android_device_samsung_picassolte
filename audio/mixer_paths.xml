@@ -1087,4 +1087,19 @@
                 <path name="voice-call-main-mic" />
         </path>
 
+	<path name="voice-speaker-dmic-ef">
+		<path name="main-mic" />
+		<ctl name="ADC1 Volume" value="19" />
+		<ctl name="DEC6 Volume" value="84" />
+	</path>
+
+        <path name="voice-headphones">
+                 <path name="headset" />
+        </path>
+
+	<path name="voice-headset-mic">
+		<path name="ear-mic" />
+		<ctl name="ADC2 Volume" value="12" />
+		<ctl name="DEC5 Volume" value="84" />
+	</path>
 </mixer>
