@@ -22,6 +22,11 @@
 
 include device/samsung/tabpro-common/BoardConfigCommon.mk
 
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/picassolte/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/picassolte/bluetooth/vnd_picassolte.txt
+BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
+
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_picassolte_defconfig
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
