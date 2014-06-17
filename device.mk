@@ -32,14 +32,4 @@ PRODUCT_COPY_FILES_OVERRIDES += \
    system/etc/permissions/android.hardware.nfc.xml \
    system/etc/permissions/android.hardware.nfc.hce.xml
 
-# Radio properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/system/lib/libsec-ril.so \
-    ril.subscription.types=NV,RUIM \
-    ro.ril.hsxpa=1 \
-    ro.ril.gprsclass=10 \
-    persist.radio.add_power_save=1 \
-    persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.lte_vrat_report=1 \
-
 $(call inherit-product, device/samsung/tabpro-common/tabpro.mk)
