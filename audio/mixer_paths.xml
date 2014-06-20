@@ -1060,4 +1060,9 @@
         <path name="speaker-and-headphones-cdp">
                 <path name="speaker-and-headphones" />
         </path>
+
+        <path name="voice-call-sub-mic">
+                <path name="vr-main-mic" />
+        </path>
+
 </mixer>
