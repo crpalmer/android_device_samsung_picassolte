@@ -32,6 +32,10 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_picassolte_defconfig
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/picassolte/mkbootimg.mk
 
+# Recovery
+
+TARGET_RECOVERY_FSTAB := device/samsung/picassolte/rootdir/etc/fstab.qcom
+
 # WiFi: Override msm8974 which is configured as a module
 WIFI_DRIVER_MODULE_ARG :=
 WIFI_DRIVER_MODULE_AP_ARG :=
