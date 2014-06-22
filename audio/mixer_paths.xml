@@ -1065,4 +1065,11 @@
                 <path name="vr-main-mic" />
         </path>
 
+        <path name="rec-stereo-mic">
+                <path name="rec-main-mic" />
+        </path>
+
+        <path name="rec-high-gain-stereo-mic">
+                <path name="rec-high-gain-main-mic" />
+        </path>
 </mixer>
