@@ -32,4 +32,9 @@ PRODUCT_COPY_FILES_OVERRIDES += \
    system/etc/permissions/android.hardware.nfc.xml \
    system/etc/permissions/android.hardware.nfc.hce.xml
 
+# Wifi
+
+PRODUCT_PACKAGES += \
+   libnetcmdiface
+
 $(call inherit-product, device/samsung/tabpro-common/tabpro.mk)
