@@ -22,27 +22,32 @@
 
 include device/samsung/tabpro-common/BoardConfigCommon.mk
 
+TARGET_OTA_ASSERT_DEVICE := picassolte,picassoltexx
+
+# Kernel
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/picassolte/mkbootimg.mk
+TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_picassolte_defconfig
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/picassolte/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/picassolte/bluetooth/vnd_picassolte.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
+BOARD_HAVE_BLUETOOTH_BCM := true
 
-# Kernel
-TARGET_KERNEL_VARIANT_CONFIG := msm8974_sec_picassolte_defconfig
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/picassolte/mkbootimg.mk
-
-# Recovery
-
-TARGET_RECOVERY_FSTAB := device/samsung/picassolte/rootdir/etc/fstab.qcom
-
-# WiFi: Override msm8974 which is configured as a module
-WIFI_DRIVER_MODULE_ARG :=
-WIFI_DRIVER_MODULE_AP_ARG :=
-
+# Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10485760
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 13631488
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2621440000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12713966592
 
-TARGET_OTA_ASSERT_DEVICE := picassolte,picassoltexx
+# Recovery
+TARGET_RECOVERY_FSTAB := device/samsung/picassolte/rootdir/etc/fstab.qcom
+
+# WiFi
+BOARD_WLAN_DEVICE := bcmdhd
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+WIFI_DRIVER_FW_PATH_AP      := "/system/etc/wifi/bcmdhd_apsta.bin"
+WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/dhd/parameters/firmware_path"
+WIFI_DRIVER_FW_PATH_STA     := "/system/etc/wifi/bcmdhd_sta.bin"
