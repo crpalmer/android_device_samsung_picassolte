@@ -1061,8 +1061,14 @@
                 <path name="speaker-and-headphones" />
         </path>
 
+        <!-- Compatibility with other tabpro devices -->
+
         <path name="voice-call-sub-mic">
                 <path name="vr-main-mic" />
+        </path>
+
+        <path name="voice-call-handset">
+	        <path name="speaker" />
         </path>
 
         <path name="rec-stereo-mic">
