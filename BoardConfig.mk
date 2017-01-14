@@ -27,7 +27,7 @@ TARGET_OTA_ASSERT_DEVICE := picassolte,picassoltexx
 # Kernel
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02900000 --tags_offset 0x02700000
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/picassolte/mkbootimg.mk
-TARGET_KERNEL_CONFIG := cyanogenmod_picassolte_defconfig
+TARGET_KERNEL_CONFIG := picassolte_defconfig
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/picassolte/bluetooth
