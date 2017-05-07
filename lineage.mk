@@ -4,4 +4,4 @@ $(call inherit-product, device/samsung/picassolte/full_picassolte.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 PRODUCT_DEVICE := picassolte
-PRODUCT_NAME := cm_picassolte
+PRODUCT_NAME := lineage_picassolte
